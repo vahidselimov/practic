@@ -6,21 +6,54 @@ namespace task2
     {
         static void Main(string[] args)
         {
-            arr();
+            string sentence = Console.ReadLine();
+            Console.WriteLine(sentence2(sentence));
         }
-        public static void arr()
+        public static bool sentence2(string sentence)
         {
-            int[] arr = { 9, 12, 34, 21, 56, 78, 43, 23, 90, 65,90 };
-            int max = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i] > max)
-                {
-                    max = arr[i];
 
+            if (true)
+            {
+                bool hasDigit = false;
+                bool hasUpper = false;
+                bool hasLower = false;
+                foreach (char item in sentence)
+                {
+                    if (char.IsDigit(item))
+                    {
+                        hasDigit = true;
+                        continue;
+
+                    }
+                    if (char.IsUpper(item))
+                    {
+                        hasUpper = true;
+                        continue;
+
+                    }
+                    if (char.IsLower(item))
+                    {
+                        hasLower = true;
+                        continue;
+
+                    }
                 }
+                bool result = hasDigit && hasLower && hasUpper;
+                return result;
+               
             }
-            Console.WriteLine(max);
+            return false;
+           
+
+
+
+
+
+            
+
+
+
+
         }
 
 
